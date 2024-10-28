@@ -7,7 +7,6 @@ class Agent {
         this.abilitiesDisplay = abilitiesDisplay;
     }
 
-    // Genera la tarjeta HTML con el nuevo diseño y estilo de 'Abilities'
     htmlCard() {
         return `
         <div class="agent-card">
@@ -26,14 +25,14 @@ class Agent {
     }
 }
 
-// Array para almacenar todos los agentes
+
 let agents = [];
 
 async function getAgents() {
     const response = await fetch('https://valorant-api.com/v1/agents');
     const json = await response.json();
     const data = json["data"];
-    const addedNames = new Set(); // Conjunto para rastrear nombres ya añadidos
+    const addedNames = new Set(); 
 
     for (let agentJson of data) {
         const roleDisplayName = agentJson.role ? agentJson.role.displayName : null;
@@ -41,7 +40,7 @@ async function getAgents() {
             ? agentJson.abilities.map(ability => ability.displayName) 
             : [];
 
-        // Añadir solo agentes con rol conocido y nombre no duplicado
+       
         if (roleDisplayName && roleDisplayName !== "Unknown Role" && !addedNames.has(agentJson.displayName)) {
             const agent = new Agent(
                 agentJson.displayName,
@@ -51,7 +50,7 @@ async function getAgents() {
                 abilitiesDisplay
             );
             agents.push(agent);
-            addedNames.add(agentJson.displayName); // Añadir nombre al conjunto
+            addedNames.add(agentJson.displayName); 
         }
     }
     renderAgents();
@@ -61,8 +60,7 @@ getAgents();
 
 function renderAgents() {
     const container = document.getElementById("agents-container");
-    container.innerHTML = ""; // Limpiar el contenedor antes de renderizar
-
+    container.innerHTML = ""; 
     for (let agent of agents) {
         container.innerHTML += agent.htmlCard();
     }
@@ -83,12 +81,12 @@ function filterAgents(event) {
 
 function renderFilter(filteredAgents) {
     const container = document.getElementById("agents-container");
-    container.innerHTML = ""; // Limpiar el contenedor antes de renderizar filtros
+    container.innerHTML = ""; 
 
     for (let agent of filteredAgents) {
         container.innerHTML += agent.htmlCard();
     }
 }
 
-// Escuchar cambios en la barra de búsqueda
+
 document.getElementById('search').addEventListener('input', filterAgents);

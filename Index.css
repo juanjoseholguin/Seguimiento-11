@@ -22,8 +22,8 @@ input[type="text"] {
     margin: 10px auto 20px auto;
     display: block;
     border: 2px solid rgba(253, 71, 84, 0.8);
-    border-radius: 25px; /* Bordes redondeados */
-    background-color: rgba(255, 255, 255, 0.289); /* Más transparente */
+    border-radius: 25px; 
+    background-color: rgba(255, 255, 255, 0.289); 
     font-size: 1.1em;
     transition: border-color 0.3s;
     color: #FD4754; /* Texto rojo */
@@ -36,62 +36,62 @@ input[type="text"]:focus {
 
 #agents-container {
     display: flex;
-    flex-direction: column; /* Una sola columna */
-    align-items: center; /* Centrar agentes */
+    flex-direction: column; 
+    align-items: center; 
     margin: 0 auto;
-    width: 90%; /* Aumentar el ancho total del contenedor */
+    width: 90%; 
 }
 
 .agent-card {
-    background-color: white; /* Fondo blanco */
+    background-color: white; 
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width: 700px; /* Aumentar el ancho para estirarlo más */
-    margin: 20px 0; /* Espacio vertical entre agentes */
-    display: flex; /* Mostrar contenido en horizontal */
+    width: 700px; 
+    margin: 20px 0; 
+    display: flex; 
     align-items: center;
     transition: transform 0.3s, background-color 0.3s;
     overflow: hidden;
-    padding: 15px; /* Espaciado interno */
-    color: #202c38; /* Texto azul por defecto */
+    padding: 15px; 
+    color: #202c38; 
 }
 
 .agent-card:hover {
     transform: scale(1.05);
-    background-color: rgba(253, 71, 84, 0.5); /* Fondo rojizo con transparencia */
-    color: white; /* Texto blanco al hacer hover */
+    background-color: rgba(253, 71, 84, 0.5); 
+    color: white; 
 }
 
 .agent-image {
-    border-radius: 10px; /* Bordes redondeados a la imagen */
-    width: 180px; /* Ajuste de ancho de imagen */
-    max-width: 100%; /* Evitar que se deforme en ancho */
-    height: auto; /* Mantener proporciones de la imagen */
-    margin-right: 20px; /* Espacio entre imagen y texto */
+    border-radius: 10px; 
+    width: 180px; 
+    max-width: 100%; 
+    height: auto; 
+    margin-right: 20px; 
 }
 
 .agent-info {
     display: flex;
-    flex-direction: column; /* Estructura vertical */
-    justify-content: center; /* Centrar verticalmente */
-    width: calc(100% - 200px); /* Espacio restante para el texto */
+    flex-direction: column; 
+    justify-content: center; 
+    width: calc(100% - 200px); 
 }
 
 .agent-name {
-    font-size: 1.8em; /* Aumentar tamaño del nombre */
-    margin: 5px 0; /* Espacio alrededor del nombre */
+    font-size: 1.8em; 
+    margin: 5px 0; 
     font-weight: bold;
 }
 
 .agent-role {
-    font-size: 1.3em; /* Aumentar tamaño del rol */
+    font-size: 1.3em; 
     font-weight: bold;
-    margin: 8px 0; /* Espacio alrededor del rol */
+    margin: 8px 0; 
 }
 
 .agent-desc {
-    font-size: 1em; /* Tamaño de descripción */
-    margin: 5px 0; /* Espacio alrededor de la descripción */
+    font-size: 1em; 
+    margin: 5px 0; 
 }
 
 .abilities-list {
@@ -109,7 +109,7 @@ input[type="text"]:focus {
     font-weight: bold;
 }
 
-/* Cambiar color del nombre al hacer hover */
+
 .agent-card:hover .agent-name {
-    color: #202c38; /* Color azul al hacer hover */
+    color: #202c38; 
 }
