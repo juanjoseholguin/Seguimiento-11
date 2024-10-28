@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #0D0A33, #C61D3D);
+    color: white;
+    font-family: 'Roboto Slab', sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #FD4754;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto 20px auto;
+    display: block;
+    border: 2px solid rgba(253, 71, 84, 0.8);
+    border-radius: 25px; /* Bordes redondeados */
+    background-color: rgba(255, 255, 255, 0.289); /* Más transparente */
+    font-size: 1.1em;
+    transition: border-color 0.3s;
+    color: #FD4754; /* Texto rojo */
+}
+
+input[type="text"]:focus {
+    border-color: rgb(159, 14, 14);
+    outline: none;
+}
+
+#agents-container {
+    display: flex;
+    flex-direction: column; /* Una sola columna */
+    align-items: center; /* Centrar agentes */
+    margin: 0 auto;
+    width: 90%; /* Aumentar el ancho total del contenedor */
+}
+
+.agent-card {
+    background-color: white; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 700px; /* Aumentar el ancho para estirarlo más */
+    margin: 20px 0; /* Espacio vertical entre agentes */
+    display: flex; /* Mostrar contenido en horizontal */
+    align-items: center;
+    transition: transform 0.3s, background-color 0.3s;
+    overflow: hidden;
+    padding: 15px; /* Espaciado interno */
+    color: #202c38; /* Texto azul por defecto */
+}
+
+.agent-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(253, 71, 84, 0.5); /* Fondo rojizo con transparencia */
+    color: white; /* Texto blanco al hacer hover */
+}
+
+.agent-image {
+    border-radius: 10px; /* Bordes redondeados a la imagen */
+    width: 180px; /* Ajuste de ancho de imagen */
+    max-width: 100%; /* Evitar que se deforme en ancho */
+    height: auto; /* Mantener proporciones de la imagen */
+    margin-right: 20px; /* Espacio entre imagen y texto */
+}
+
+.agent-info {
+    display: flex;
+    flex-direction: column; /* Estructura vertical */
+    justify-content: center; /* Centrar verticalmente */
+    width: calc(100% - 200px); /* Espacio restante para el texto */
+}
+
+.agent-name {
+    font-size: 1.8em; /* Aumentar tamaño del nombre */
+    margin: 5px 0; /* Espacio alrededor del nombre */
+    font-weight: bold;
+}
+
+.agent-role {
+    font-size: 1.3em; /* Aumentar tamaño del rol */
+    font-weight: bold;
+    margin: 8px 0; /* Espacio alrededor del rol */
+}
+
+.agent-desc {
+    font-size: 1em; /* Tamaño de descripción */
+    margin: 5px 0; /* Espacio alrededor de la descripción */
+}
+
+.abilities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0;
+    margin: 10px 0;
+    list-style: none;
+}
+
+.abilities-list li::before {
+    content: "• ";
+    color: #FD4754;
+    font-weight: bold;
+}
+
+/* Cambiar color del nombre al hacer hover */
+.agent-card:hover .agent-name {
+    color: #202c38; /* Color azul al hacer hover */
+}
